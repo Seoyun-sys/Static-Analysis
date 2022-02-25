@@ -1,0 +1,248 @@
+"---- pairwise.wilcox.test: CRP
+"
+
+	Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+
+data:  df[[i]] and df[[1]] 
+
+  1       2     
+2 5.1e-07 -     
+3 9.8e-05 0.0098
+
+P value adjustment method: BH 
+"---- pairwise.wilcox.test full table: CRP
+"
+"---- pairwise.wilcox.test: CRP
+"
+
+	Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+
+data:  df[[i]] and df[[1]] 
+
+  1       2     
+2 5.1e-07 -     
+3 9.8e-05 0.0098
+
+P value adjustment method: BH 
+"---- pairwise.wilcox.test full table: CRP
+"
+             1            2            3
+1 1.000000e+00 5.081568e-07 9.844328e-05
+2 5.081568e-07 1.000000e+00 9.750737e-03
+3 9.844328e-05 9.750737e-03 1.000000e+00
+"---- pairwise.wilcox.test: WBC
+"
+
+	Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+
+data:  df[[i]] and df[[1]] 
+
+  1       2      
+2 2.0e-15 -      
+3 < 2e-16 2.2e-11
+
+P value adjustment method: BH 
+"---- pairwise.wilcox.test full table: WBC
+"
+             1            2            3
+1 1.000000e+00 2.004404e-15 4.665351e-18
+2 2.004404e-15 1.000000e+00 2.182418e-11
+3 4.665351e-18 2.182418e-11 1.000000e+00
+"---- pairwise.wilcox.test: Neutrophil_count
+"
+
+	Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+
+data:  df[[i]] and df[[1]] 
+
+  1       2    
+2 4.1e-08 -    
+3 4.1e-08 1e-04
+
+P value adjustment method: BH 
+"---- pairwise.wilcox.test full table: Neutrophil_count
+"
+             1            2            3
+1 1.000000e+00 4.070999e-08 4.070999e-08
+2 4.070999e-08 1.000000e+00 1.004232e-04
+3 4.070999e-08 1.004232e-04 1.000000e+00
+"---- pairwise.wilcox.test: Lymphocyte_count
+"
+
+	Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+
+data:  df[[i]] and df[[1]] 
+
+  1       2      
+2 9.5e-16 -      
+3 < 2e-16 < 2e-16
+
+P value adjustment method: BH 
+"---- pairwise.wilcox.test full table: Lymphocyte_count
+"
+             1            2            3
+1 1.000000e+00 9.538194e-16 5.059303e-27
+2 9.538194e-16 1.000000e+00 1.193868e-18
+3 5.059303e-27 1.193868e-18 1.000000e+00
+"---- pairwise.wilcox.test: Neutrophil_to_Lymphocyte_ratio
+"
+
+	Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+
+data:  df[[i]] and df[[1]] 
+
+  1      2     
+2 0.1988 -     
+3 0.0087 0.0153
+
+P value adjustment method: BH 
+"---- pairwise.wilcox.test full table: Neutrophil_to_Lymphocyte_ratio
+"
+            1          2           3
+1 1.000000000 0.19883036 0.008705722
+2 0.198830356 1.00000000 0.015318164
+3 0.008705722 0.01531816 1.000000000
+"---- pairwise.wilcox.test: Platelet_to_Lymphocyte_ratio
+"
+
+	Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+
+data:  df[[i]] and df[[1]] 
+
+  1      2     
+2 0.0063 -     
+3 0.0014 0.0063
+
+P value adjustment method: BH 
+"---- pairwise.wilcox.test full table: Platelet_to_Lymphocyte_ratio
+"
+            1           2           3
+1 1.000000000 0.006308823 0.001363038
+2 0.006308823 1.000000000 0.006308823
+3 0.001363038 0.006308823 1.000000000
+"---- pairwise.wilcox.test: CRP
+"
+
+	Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+
+data:  df[[i]] and df[[1]] 
+
+       Group1  Group2
+Group2 5.1e-07 -     
+Group3 9.8e-05 0.0098
+
+P value adjustment method: BH 
+"---- pairwise.wilcox.test full table: CRP
+"
+             Group1       Group2       Group3
+Group1 1.000000e+00 5.081568e-07 9.844328e-05
+Group2 5.081568e-07 1.000000e+00 9.750737e-03
+Group3 9.844328e-05 9.750737e-03 1.000000e+00
+"---- pairwise.wilcox.test: WBC
+"
+
+	Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+
+data:  df[[i]] and df[[1]] 
+
+       Group1  Group2 
+Group2 2.0e-15 -      
+Group3 < 2e-16 2.2e-11
+
+P value adjustment method: BH 
+"---- pairwise.wilcox.test full table: WBC
+"
+             Group1       Group2       Group3
+Group1 1.000000e+00 2.004404e-15 4.665351e-18
+Group2 2.004404e-15 1.000000e+00 2.182418e-11
+Group3 4.665351e-18 2.182418e-11 1.000000e+00
+"---- pairwise.wilcox.test: Neutrophil_count
+"
+
+	Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+
+data:  df[[i]] and df[[1]] 
+
+       Group1  Group2
+Group2 4.1e-08 -     
+Group3 4.1e-08 1e-04 
+
+P value adjustment method: BH 
+"---- pairwise.wilcox.test full table: Neutrophil_count
+"
+             Group1       Group2       Group3
+Group1 1.000000e+00 4.070999e-08 4.070999e-08
+Group2 4.070999e-08 1.000000e+00 1.004232e-04
+Group3 4.070999e-08 1.004232e-04 1.000000e+00
+"---- pairwise.wilcox.test: Lymphocyte_count
+"
+
+	Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+
+data:  df[[i]] and df[[1]] 
+
+       Group1  Group2 
+Group2 9.5e-16 -      
+Group3 < 2e-16 < 2e-16
+
+P value adjustment method: BH 
+"---- pairwise.wilcox.test full table: Lymphocyte_count
+"
+             Group1       Group2       Group3
+Group1 1.000000e+00 9.538194e-16 5.059303e-27
+Group2 9.538194e-16 1.000000e+00 1.193868e-18
+Group3 5.059303e-27 1.193868e-18 1.000000e+00
+"---- pairwise.wilcox.test: Platelet_count
+"
+
+	Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+
+data:  df[[i]] and df[[1]] 
+
+       Group1  Group2 
+Group2 1.6e-08 -      
+Group3 2.4e-12 2.3e-08
+
+P value adjustment method: BH 
+"---- pairwise.wilcox.test full table: Platelet_count
+"
+             Group1       Group2       Group3
+Group1 1.000000e+00 1.552203e-08 2.371021e-12
+Group2 1.552203e-08 1.000000e+00 2.347251e-08
+Group3 2.371021e-12 2.347251e-08 1.000000e+00
+"---- pairwise.wilcox.test: Neutrophil_to_Lymphocyte_ratio
+"
+
+	Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+
+data:  df[[i]] and df[[1]] 
+
+       Group1 Group2
+Group2 0.1988 -     
+Group3 0.0087 0.0153
+
+P value adjustment method: BH 
+"---- pairwise.wilcox.test full table: Neutrophil_to_Lymphocyte_ratio
+"
+            Group1     Group2      Group3
+Group1 1.000000000 0.19883036 0.008705722
+Group2 0.198830356 1.00000000 0.015318164
+Group3 0.008705722 0.01531816 1.000000000
+"---- pairwise.wilcox.test: Platelet_to_lymphocyte_ratio
+"
+
+	Pairwise comparisons using Wilcoxon rank sum test with continuity correction 
+
+data:  df[[i]] and df[[1]] 
+
+       Group1 Group2
+Group2 0.0063 -     
+Group3 0.0014 0.0063
+
+P value adjustment method: BH 
+"---- pairwise.wilcox.test full table: Platelet_to_lymphocyte_ratio
+"
+            Group1      Group2      Group3
+Group1 1.000000000 0.006308823 0.001363038
+Group2 0.006308823 1.000000000 0.006308823
+Group3 0.001363038 0.006308823 1.000000000
