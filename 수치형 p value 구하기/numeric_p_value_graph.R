@@ -55,10 +55,13 @@ group3 <- df %>%  filter(group =="Group3")
 
 
 attach(df)
-# 평균 및 표준편차
 
+# 평균 및 표준편차
+# 반올림 및 평균 테스트
 des1 <- round(mean(CRP),3)
 
+
+#각 검사의 평균 및 표준편차 구해서 "test_summary_220224.txt"에 붙임
 for(i in 5:length(df)){
   str <-paste("---- group1 mean sd : ",colnames(df[i]),"\n",sep="")
   write.table(str, file="test_summary_220224.txt", append=T, row.names = F, col.names = F)
@@ -75,6 +78,7 @@ for(i in 5:length(df)){
   s <- round(sd(group2[[i]]),2)
   capture.output(s,file="test_summary_220224.txt", append=T)
   
+  
   str <-paste("---- group3 mean sd : ",colnames(df[i]),"\n",sep="")
   write.table(str, file="test_summary_220224.txt", append=T, row.names = F, col.names = F)
   me <- round(mean(group3[[i]]),2)
@@ -87,49 +91,7 @@ for(i in 5:length(df)){
 
 
 
-
-
-
-for(i in 5:length(df)){
-  
-  str <-paste("---- Anderson-Darling normality test: ", colnames(df[i]), "\n", sep="")
-  write.table(str, file="test_summary_220224.txt", append=T, row.names = F, col.names = F)
-  
-  AD <- ad.test(df[[i]])
-  capture.output(AD, file = "test_summary_220224.txt", append=T)
- 
-  
-  str2 <-paste("---- Anova test (정규성 따르면): ", colnames(df[i]), "\n", sep="")
-  write.table(str2, file="test_summary_220224.txt", append=T, row.names = F, col.names = F)
-  
-  aov_res <- aov(Neutrophil_to_Lymphocyte_ratio~group,data=df)
-  aov_sum <- summary(aov_res)
-  capture.output(aov_sum, file = "test_summary_220224.txt", append=T)
-  
-  
-  
-  
-
-  str3 <-paste("---- Kruskal-Wallis rank sum test (정규성 따르지않으면) : ", colnames(df[i]), "\n", sep="")
-  write.table(str3, file="test_summary_220224.txt", append=T, row.names = F, col.names = F)
-  
-  krus <- kruskal.test(df[[i]]~df[[1]])
-  capture.output(krus, file = "test_summary_220224.txt", append=T)
-  
-  
-  
-
-}
-
-
-
-
-
-#shapiro.test(CRP) 
-#ks.test(CRP,"pnorm")
-
-
-#qqline(Neutrophil count)
+#정규성 선형그래프 만들어 보기 -> 눈으로만 봐서는 알 수 없음
 qqnorm(CRP) 
 qqline(CRP)
 
@@ -153,16 +115,46 @@ qqline(Platelet_to_lymphocyte_ratio)
 
 
 
-
-
-
-
-
-
+# Anderson-Darling nomality test를 통해 정규분포 검정 후 P-value 추출
+# 추출된 결과 "test_summary_220224.txt"에 붙임
 for(i in 5:length(df)){
   
+  str <-paste("---- Anderson-Darling normality test: ", colnames(df[i]), "\n", sep="")
+  write.table(str, file="test_summary_220224.txt", append=T, row.names = F, col.names = F)
+  
+  AD <- ad.test(df[[i]])
+  capture.output(AD, file = "test_summary_220224.txt", append=T)
+ 
   
   
+  
+  str2 <-paste("---- Anova test (정규성 따르면): ", colnames(df[i]), "\n", sep="")
+  write.table(str2, file="test_summary_220224.txt", append=T, row.names = F, col.names = F)
+  
+  aov_res <- aov(Neutrophil_to_Lymphocyte_ratio~group,data=df)
+  aov_sum <- summary(aov_res)
+  capture.output(aov_sum, file = "test_summary_220224.txt", append=T)
+  
+  
+  
+
+  str3 <-paste("---- Kruskal-Wallis rank sum test (정규성 따르지않으면) : ", colnames(df[i]), "\n", sep="")
+  write.table(str3, file="test_summary_220224.txt", append=T, row.names = F, col.names = F)
+  
+  krus <- kruskal.test(df[[i]]~df[[1]])
+  capture.output(krus, file = "test_summary_220224.txt", append=T)
+  
+  
+  
+
+}
+
+
+
+
+# pairwise wilcox test를 통해 정규분포 검정 후 Group1-Group2, Group1-Group3, Group2-Group3 P-value 추출
+# 추출된 결과 "test_summary_220224.txt"에 붙임
+for(i in 5:length(df)){
   
 
 str <-paste("---- pairwise.wilcox.test: ", colnames(df[i]), "\n", sep="")
@@ -182,6 +174,9 @@ capture.output(pt_table, file = "test_summary_220224.txt", append=T)
 }
 
 
+
+
+###########그냥 한 번 해봄,,,,
 mytable(group~.,data=df,method=3,catMethod = 1,show.all=T)
 age_mean <- round(mean(as.numeric(unlist(group3$age)) , na.rm =T),3)
 age_sd <-round(sd(as.numeric(unlist(group3$age)) , na.rm =T),3)
@@ -190,8 +185,8 @@ age_sd <-round(sd(as.numeric(unlist(group3$age)) , na.rm =T),3)
 
 
 
-######## 그래프 제작
-####################################################################################3
+######## 그래프 제작 돌리지 마시오##############################################
+################################################################################
 df_len <- length(df)
 
 lab_name <- df[,5:df_len] %>% names()
